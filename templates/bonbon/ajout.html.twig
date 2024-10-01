@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajout de Bonbon{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>Ajouter un Bonbon</h1>
+
+        {{ form_start(form) }}
+            {{ form_row(form.nom) }}
+            {{ form_row(form.prix) }}
+            {{ form_row(form.gout) }}
+            {{ form_row(form.description) }}
+            <button type="submit" class="btn btn-primary">{{ form_widget(form.save) }}</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
